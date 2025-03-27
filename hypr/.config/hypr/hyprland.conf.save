@@ -1,0 +1,27 @@
+# Sourcing external config files
+
+# Default Configs
+$configs = $HOME/.config/hypr/configs
+
+source=$configs/Settings.conf
+source=$configs/Keybinds.conf
+
+# User Configs
+$UserConfigs = $HOME/.config/hypr/UserConfigs
+
+source= $UserConfigs/Startup_Apps.conf
+source= $UserConfigs/ENVariables.conf
+source= $UserConfigs/Monitors.conf
+source= $UserConfigs/Laptops.conf
+source= $UserConfigs/LaptopDisplay.conf
+source= $UserConfigs/WindowRules.conf
+source= $UserConfigs/UserDecorAnimations.conf
+source= $UserConfigs/UserKeybinds.conf
+source= $UserConfigs/UserSettings.conf
+source= $UserConfigs/WorkspaceRules.conf
+
+
+
+exec-once = wl-paste --type text --watch cliphist store # Stores only text data
+exec-once = wl-paste --type image --watch cliphist store # Stores only image data
+bind = SUPER, V, exec, cliphist list | rofi -dmenu | cliphist decode | wl-copy && wtype -M ctrl shift -P v -m ctrl
