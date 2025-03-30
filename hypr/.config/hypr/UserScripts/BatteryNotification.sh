@@ -9,6 +9,7 @@ send_urgent_notification() {
     local level=$1
     notify-send --urgency=CRITICAL "Battery Critically Low" "Battery level is ${level}%"
     hyprctl notify 0 10000 "rgb(ff1ea3)" "Your Battery Is Really Low: ${level}%"
+    mpv ../UserSounds/battery-low.ogg 
 }
 # Infinite loop to check battery level
 while true; do

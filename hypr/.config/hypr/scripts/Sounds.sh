@@ -3,7 +3,8 @@
 # This script is used to play system sounds.
 # Script is used by Volume.Sh and ScreenShots.sh 
 
-theme="freedesktop" # Set the theme for the system sounds.
+#theme="freedesktop" # Set the theme for the system sounds.
+theme="MacOSSounds4Gnome" # Set the theme for the system sounds.
 mute=false          # Set to true to mute the system sounds.
 
 # Mute individual sounds here.
@@ -42,7 +43,7 @@ if [ -d "/run/current-system/sw/share/sounds" ]; then
 else
     systemDIR="/usr/share/sounds"
 fi
-userDIR="$HOME/.local/share/sounds"
+userDIR="$HOME/.local/share/sounds/"
 defaultTheme="freedesktop"
 
 # Prefer the user's theme, but use the system's if it doesn't exist.
@@ -58,13 +59,13 @@ iTheme=$(cat "$sDIR/index.theme" | grep -i "inherits" | cut -d "=" -f 2)
 iDIR="$sDIR/../$iTheme"
 
 # Find the sound file and play it.
-sound_file=$(find $sDIR/stereo -name "$soundoption" -print -quit)
+sound_file=$(find "$sDIR"/stereo -name "$soundoption" -print -quit)
 if ! test -f "$sound_file"; then
-    sound_file=$(find $iDIR/stereo -name "$soundoption" -print -quit)
+    sound_file=$(find "$iDIR"/stereo -name "$soundoption" -print -quit)
     if ! test -f "$sound_file"; then
-        sound_file=$(find $userDIR/$defaultTheme/stereo -name "$soundoption" -print -quit)
+        sound_file=$(find "$userDIR/$defaultTheme"/stereo -name "$soundoption" -print -quit)
         if ! test -f "$sound_file"; then
-            sound_file=$(find $systemDIR/$defaultTheme/stereo -name "$soundoption" -print -quit)
+            sound_file=$(find "$systemDIR/$defaultTheme"/stereo -name "$soundoption" -print -quit)
             if ! test -f "$sound_file"; then
                 echo "Error: Sound file not found."
                 exit 1

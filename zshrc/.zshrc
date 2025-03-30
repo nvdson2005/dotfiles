@@ -106,6 +106,16 @@ source /home/ducsonds2005/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
+# Add a hook to chpwd to save the last directory
+autoload -Uz add-zsh-hook
+chpwd() { print -r -- "$PWD" > ~/.last_dir }
+add-zsh-hook chpwd chpwd
+
+# Alias to restore the last directory manually
+# To go back to the last directory, run `cdl`
+alias cdl='[[ -f ~/.last_dir ]] && cd "$(cat ~/.last_dir)"'
+
+
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 

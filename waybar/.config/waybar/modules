@@ -771,7 +771,7 @@
 		},
 		"return-type": "json",
 		"exec-if": "which swaync-client",
-		"exec": "swaync-client -swb",
+		"exec": "swaync-client -swb && paplay ~/.config/hypr/UserSounds/dialog-information.ogg",
 		"on-click": "sleep 0.1 && swaync-client -t -sw",
 		"on-click-right": "swaync-client -d -sw",
 		"escape": true,
