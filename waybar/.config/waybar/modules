@@ -592,7 +592,7 @@
 	},
 	"pulseaudio": {
 		"format": "{icon} {volume}%",
-		"format-bluetooth": "{icon} 󰂰 {volume}%",
+		//"format-bluetooth": "{icon} 󰂰 {volume}%",
 		"format-muted": "󰖁",
 		"format-icons": {
 			"headphone": "",
@@ -621,7 +621,7 @@
 	},
 	"pulseaudio#1": {
 		"format": "{icon} {volume}%",
-		"format-bluetooth": "{icon} {volume}%",
+		//"format-bluetooth": "{icon} {volume}%",
 		"format-bluetooth-muted": " {icon}",
 		"format-muted": "󰸈",
 		"format-icons": {
@@ -1163,7 +1163,7 @@
 	},
 	"pulseaudio": {
 		"format": "{icon} {volume}%",
-		"format-bluetooth": " {icon} {volume} %",
+		//"format-bluetooth": " {icon} {volume} %",
 		"format-muted": " mute",
 		"format-icons": {
 			"headphone": "",
