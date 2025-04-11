@@ -9,7 +9,7 @@
 	font-weight: bold;
 	min-height: 0;	
 	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-	font-size: 15px;
+	font-size: 16px;
 	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
 	
@@ -155,6 +155,25 @@ window#waybar.empty #window {
 	animation-direction: alternate;
 }
 
+#battery.warning:not(.charging){
+  color: #e04107;
+	animation-name: blink;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+#battery.good {
+  color: #00ff00;
+}
+
+#battery.normal{
+  color: #0789e0;
+}
+
+#battery.medium{
+  color: #cce014;
+}
 #pulseaudio-slider slider {
 	min-width: 0px;
 	min-height: 0px;
@@ -201,4 +220,12 @@ window#waybar.empty #window {
 	
 #window {
   color: #fa9ebc;
+}
+
+#custom-power{
+  color: #fa9ebc;
+}
+
+#tray {
+  font-size: 25px;
 }

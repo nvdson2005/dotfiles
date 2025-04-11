@@ -1079,7 +1079,9 @@
 		"full-at": 100,
 		"design-capacity": false,
 		"states": {
-			"good": 95,
+			"good": 100,
+      "normal": 80,
+      "medium": 50,
 			"warning": 30,
 			"critical": 15
 		},
