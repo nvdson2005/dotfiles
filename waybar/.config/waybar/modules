@@ -1100,6 +1100,7 @@
 		],
 		"format-time": "{H}h {M}min",
 		"tooltip": true,
+    "tooltip-format": "{timeTo}",
 		"on-click-right": "~/.config/hypr/scripts/glassmorphism"
 	},
 	"clock": {

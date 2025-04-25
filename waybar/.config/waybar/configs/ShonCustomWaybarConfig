@@ -37,6 +37,26 @@
         "custom/lock",
         "custom/power"
     ],
+    //custom battery module
+    "battery": {
+        "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
+        "format-icons": ["", "", "", "", ""],
+        "format-time": "{H}h{M}m",
+        "format-charging": "<span font='Font Awesome 5 Free'></span> <span font='Font Awesome 5 Free 11'>{icon}</span> {capacity}%",
+        "format-full": "<span font='Font Awesome 5 Free'></span> <span font='Font Awesome 5 Free 11'>{icon}</span> {capacity}%",
+        "interval": 30,
+        "states": {
+            "good": 100,
+            "normal": 80,
+            "medium": 50,
+            "warning": 30,
+            "critical": 15
+        },
+        "tooltip": true,
+        "tooltip-format": "{timeTo}",
+        "on-click": "2"
+    },
+    //custom bluetooth module
     "bluetooth": {
 		"format": "",
 		"format-disabled": "󰂳",
