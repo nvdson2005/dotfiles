@@ -130,7 +130,7 @@ add-zsh-hook chpwd chpwd
 # To go back to the last directory, run `cdl`
 alias cdl='[[ -f ~/.last_dir ]] && cd "$(cat ~/.last_dir)"'
 # Alies to show 5 latest directories
-alias lastdirs='dirs -v | head -n 5'
+alias lastdirs='dirs -v | head -n 15'
 
 
 # Load Angular CLI autocompletion.
